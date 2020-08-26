@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/queeksm/Restaurant-page-js.git"
+  },
+  "author": "Andres Felipe Perez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/queeksm/Restaurant-page-js/issues"
+  },
+  "homepage": "https://github.com/queeksm/Restaurant-page-js#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
