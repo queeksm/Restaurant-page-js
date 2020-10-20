@@ -2,6 +2,7 @@ import './style.css';
 import {masterController} from './modules/renderer.js';
 import {mainTabRenderer} from './modules/mainTab.js';
 import {menuRenderer} from './modules/menuTab.js';
+import {contactRenderer} from './modules/contact.js';
 
 function tabCleaner(tab){
   let currentPages = document.getElementsByClassName("Page");
@@ -34,7 +35,7 @@ function tabFiller (tabId) {
       break;
     case "tabThree":
       let flag3 = document.getElementsByClassName("contact");
-      if (flag2[0] == null){        
+      if (flag3[0] == null){        
         contactRenderer();
       }
       tabCleaner(flag3);
