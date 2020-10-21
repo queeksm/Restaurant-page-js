@@ -9,10 +9,10 @@ function tabCleaner(tab){
 
   for (let index = 0; index < currentPages.length; index++) {    
     if (currentPages[index].className != tab[0].className){      
-      currentPages[index].style.display = "none";
+      currentPages[index].className = currentPages[index].className.replace('active','none');
     }
     else {
-      currentPages[index].style.display = "initial";
+      currentPages[index].className = currentPages[index].className.replace('none','active');
     }
   }
 }

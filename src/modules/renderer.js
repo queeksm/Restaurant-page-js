@@ -27,9 +27,9 @@ function masterController(){
   tabTwo.addEventListener("click",styler);
   tabThree.addEventListener("click",styler);
 
-  tabOne.innerHTML = 'Tab One';
-  tabTwo.innerHTML = 'Tab Two';
-  tabThree.innerHTML = 'Tab Three';  
+  tabOne.innerHTML = 'About us';
+  tabTwo.innerHTML = 'Menu';
+  tabThree.innerHTML = 'Contact us';  
 
   tabs.appendChild(tabOne);
   tabs.appendChild(tabTwo);
