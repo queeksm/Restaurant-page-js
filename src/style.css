@@ -1,48 +1,15 @@
 .content {
   display: flex;
   flex-direction: column;
-  border: 1px red solid;
-}
-
-.top {
-  display: flex;
-  justify-content: center;
-  border: 1px green solid;
-  padding: 20px;
-}
-
-.title-card {
-  font-size: 50px;
-  color: orangered;
-}
-
-.content {
-  padding: 20px;
-  font-size: 20px;
-}
-
-.review-content {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  border: 1px green solid;
 }
 
 .main-content {
   padding-bottom: 20px;
-  color: orangered;
 }
-
-.bottom {
-  padding: 20px;
-  border: 1px green solid;
-}
-
 
 .tabManager {
   display: flex;
   flex-direction: column;
-  border: 1px green solid;
 }
 
 .tabs {
@@ -77,14 +44,14 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 1px red solid;
+  
 }
 
 .Page {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 1px blue solid;
+  
 }
 
 .main {
