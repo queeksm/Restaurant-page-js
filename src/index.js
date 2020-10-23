@@ -1,71 +1,67 @@
 import './style.css';
-import {masterController} from './modules/renderer.js';
-import {mainTabRenderer} from './modules/mainTab.js';
-import {menuRenderer} from './modules/menuTab.js';
-import {contactRenderer} from './modules/contact.js';
+import { masterController } from './modules/renderer';
+import { mainTabRenderer } from './modules/mainTab';
+import { menuRenderer } from './modules/menuTab';
+import { contactRenderer } from './modules/contact';
 
-function tabCleaner(tab){
-  let currentPages = document.getElementsByClassName("Page");
+function tabCleaner(tab) {
+  let currentPages = document.getElementsByClassName('Page');
 
-  for (let index = 0; index < currentPages.length; index++) {    
-    if (currentPages[index].className != tab[0].className){      
-      currentPages[index].className = currentPages[index].className.replace('active','none');
+  for (let index = 0; index < currentPages.length; index += 1) {
+    if (currentPages[index].className !== tab[0].className) {
+      currentPages[index].className = currentPages[index].className.replace('active', 'none');
     }
     else {
-      currentPages[index].className = currentPages[index].className.replace('none','active');
+      currentPages[index].className = currentPages[index].className.replace('none', 'active');
     }
   }
 }
 
-function tabFiller (tabId) {  
+function tabFiller(tabId) {
+  let flag = document.getElementsByClassName('main');
+  let flag2 = document.getElementsByClassName('menu');
+  let flag3 = document.getElementsByClassName('contact');
   switch (tabId) {
-    case "tabOne":      
-      let flag = document.getElementsByClassName("main");
-      if (flag[0] == null){
+    case 'tabOne':
+      if (flag[0] == null) {
         mainTabRenderer();
       }
-      tabCleaner(flag);    
+      tabCleaner(flag);
       break;
-    case "tabTwo":      
-      let flag2 = document.getElementsByClassName("menu");
-      if (flag2[0] == null){        
+    case 'tabTwo':
+      if (flag2[0] == null) {
         menuRenderer();
       }
       tabCleaner(flag2);
       break;
-    case "tabThree":
-      let flag3 = document.getElementsByClassName("contact");
-      if (flag3[0] == null){        
+    case 'tabThree':
+      if (flag3[0] == null) {
         contactRenderer();
       }
       tabCleaner(flag3);
       break;
     default:
-      break;    
+      break;
   }
 }
 
-function toggler(mContainer,tab){
-  mContainer.style.display = "initial";
+function toggler(mContainer, tab) {
+  mContainer.style.display = 'initial';
   tabFiller(tab);
 }
 
 function styler(evt) {
-  let mContainer = document.getElementsByClassName("tabContent");
-  let tabs = document.getElementsByClassName("tab");  
+  let mContainer = document.getElementsByClassName('tabContent');
+  let tabs = document.getElementsByClassName('tab');
 
-  for (let i = 0; i < tabs.length; i++) {
-    tabs[i].className = tabs[i].className.replace("active", "");    
-  }  
+  for (let i = 0; i < tabs.length; i += 1) {
+    tabs[i].className = tabs[i].className.replace('active', '');
+  }
 
-  evt.currentTarget.className += " active";
-  toggler(mContainer[0],evt.currentTarget.id);
+  evt.currentTarget.className += ' active';
+  toggler(mContainer[0], evt.currentTarget.id);
 }
-
 
 masterController();
 
-export {styler};
-
-
-
+export { styler };

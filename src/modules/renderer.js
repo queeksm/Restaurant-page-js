@@ -1,35 +1,35 @@
-import {styler} from '../index';
+import { styler } from '../index';
 
 
-function masterController(){
-  let mContainer = document.getElementById("content");
-  let tabManager = document.createElement("div");
-  tabManager.setAttribute("class","tabManager");
+function masterController() {
+  let mContainer = document.getElementById('content');
+  let tabManager = document.createElement('div');
+  tabManager.setAttribute('class', 'tabManager');
 
-  let tabs = document.createElement("div");
-  tabs.setAttribute("class","tabs");
+  let tabs = document.createElement('div');
+  tabs.setAttribute('class', 'tabs');
 
-  let tabOne = document.createElement("button");
-  let tabTwo = document.createElement("button");
-  let tabThree = document.createElement("button");
+  let tabOne = document.createElement('button');
+  let tabTwo = document.createElement('button');
+  let tabThree = document.createElement('button');
 
-  let tabContent = document.createElement("div");
-  tabContent.style.display = "none";
+  let tabContent = document.createElement('div');
+  tabContent.style.display = 'none';
 
-  tabOne.setAttribute("class","tab");
-  tabTwo.setAttribute("class","tab");
-  tabThree.setAttribute("class","tab");
-  tabOne.setAttribute("id","tabOne");
-  tabTwo.setAttribute("id","tabTwo");
-  tabThree.setAttribute("id","tabThree");
-  tabContent.setAttribute("class","tabContent");
-  tabOne.addEventListener("click",styler);
-  tabTwo.addEventListener("click",styler);
-  tabThree.addEventListener("click",styler);
+  tabOne.setAttribute('class', 'tab');
+  tabTwo.setAttribute('class', 'tab');
+  tabThree.setAttribute('class', 'tab');
+  tabOne.setAttribute('id', 'tabOne');
+  tabTwo.setAttribute('id', 'tabTwo');
+  tabThree.setAttribute('id', 'tabThree');
+  tabContent.setAttribute('class', 'tabContent');
+  tabOne.addEventListener('click', styler);
+  tabTwo.addEventListener('click', styler);
+  tabThree.addEventListener('click', styler);
 
   tabOne.innerHTML = 'About us';
   tabTwo.innerHTML = 'Menu';
-  tabThree.innerHTML = 'Contact us';  
+  tabThree.innerHTML = 'Contact us';
 
   tabs.appendChild(tabOne);
   tabs.appendChild(tabTwo);
@@ -37,7 +37,7 @@ function masterController(){
   tabManager.append(tabs);
   tabManager.appendChild(tabContent);
 
-  mContainer.appendChild(tabManager);  
+  mContainer.appendChild(tabManager);
 }
 
-export {masterController}
+export { masterController };

@@ -1,24 +1,24 @@
-function recipeer(index,smallContainer) {
+function recipeer(index, smallContainer) {
   let flag = document.getElementById(`recipe-${index}`);
-  if (flag == null){
-    let recipe = document.createElement("div");
-    let recipeTitle = document.createElement("div");
-    let recipeBody = document.createElement("div");
-    let recipeBodyImage = document.createElement("img");
-    let recipeBodyDescription = document.createElement("div");
-    let recipeBodyAdd = document.createElement("div");
-    
-    recipe.setAttribute("class","recipe");
-    recipe.setAttribute("id",`recipe-${index}`);
-    recipeTitle.setAttribute("class","recipeTitle");
-    recipeTitle.setAttribute("id",`recipeTitle-${index}`);
-    recipeBody.setAttribute("class","recipeBody");
-    recipeBodyImage.setAttribute("class",`recipeBodyImage`);
-    recipeBodyImage.setAttribute("id",`recipeBodyImage-${index}`);
-    recipeBodyDescription.setAttribute("class",`recipeBodyDescription`);
-    recipeBodyDescription.setAttribute('id',`recipeBodyDescription-${index}`)
-    recipeBodyAdd.setAttribute("class",`recipeBodyAdd`);
-    recipeBodyAdd.setAttribute("id",`recipeBodyAdd-${index}`);
+  if (flag == null) {
+    let recipe = document.createElement('div');
+    let recipeTitle = document.createElement('div');
+    let recipeBody = document.createElement('div');
+    let recipeBodyImage = document.createElement('img');
+    let recipeBodyDescription = document.createElement('div');
+    let recipeBodyAdd = document.createElement('div');
+
+    recipe.setAttribute('class', 'recipe');
+    recipe.setAttribute('id', `recipe-${index}`);
+    recipeTitle.setAttribute('class', 'recipeTitle');
+    recipeTitle.setAttribute('id', `recipeTitle-${index}`);
+    recipeBody.setAttribute('class', 'recipeBody');
+    recipeBodyImage.setAttribute('class', 'recipeBodyImage');
+    recipeBodyImage.setAttribute('id', `recipeBodyImage-${index}`);
+    recipeBodyDescription.setAttribute('class', 'recipeBodyDescription');
+    recipeBodyDescription.setAttribute('id', `recipeBodyDescription-${index}`);
+    recipeBodyAdd.setAttribute('class', 'recipeBodyAdd');
+    recipeBodyAdd.setAttribute('id', `recipeBodyAdd-${index}`);
 
     recipeBody.appendChild(recipeBodyImage);
     recipeBody.appendChild(recipeBodyDescription);
@@ -30,19 +30,19 @@ function recipeer(index,smallContainer) {
 }
 
 function menuRenderer() {
-  let tabHolder = document.getElementsByClassName("tabContent");
-  let contentHolder = document.createElement("div");
-  let title = document.createElement("div");
-  let smallContainer = document.createElement("div");
+  let tabHolder = document.getElementsByClassName('tabContent');
+  let contentHolder = document.createElement('div');
+  let title = document.createElement('div');
+  let smallContainer = document.createElement('div');
 
-  for (let index = 0; index < 3; index++) {
-    recipeer(index,smallContainer);
+  for (let index = 0; index < 3; index += 1) {
+    recipeer(index, smallContainer);
   }
-  
-  contentHolder.setAttribute("class","Page");
-  contentHolder.className += " menu active"
-  title.setAttribute("class","menuTitle");
-  smallContainer.setAttribute("class","menuContent");
+
+  contentHolder.setAttribute('class', 'Page');
+  contentHolder.className += ' menu active';
+  title.setAttribute('class', 'menuTitle');
+  smallContainer.setAttribute('class', 'menuContent');
 
   contentHolder.appendChild(title);
   contentHolder.appendChild(smallContainer);
@@ -52,9 +52,9 @@ function menuRenderer() {
   let recipeBodyimage1 = document.getElementById('recipeBodyImage-1');
   let recipeBodyimage2 = document.getElementById('recipeBodyImage-2');
 
-  recipeBodyimage0.setAttribute('src','../src/images/img0.jpg');
-  recipeBodyimage1.setAttribute('src','../src/images/img1.jpg');
-  recipeBodyimage2.setAttribute('src','../src/images/img2.jpg');
+  recipeBodyimage0.setAttribute('src', '../src/images/img0.jpg');
+  recipeBodyimage1.setAttribute('src', '../src/images/img1.jpg');
+  recipeBodyimage2.setAttribute('src', '../src/images/img2.jpg');
 
   let recipeBodyDescription0 = document.getElementById('recipeBodyDescription-0');
   let recipeBodyDescription1 = document.getElementById('recipeBodyDescription-1');
@@ -81,4 +81,4 @@ function menuRenderer() {
   recipeTitle2.innerHTML = 'Recipe Title 2';
 }
 
-export{menuRenderer};
+export { menuRenderer };
