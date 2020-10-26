@@ -1,8 +1,8 @@
-function contactRenderer() {
-  let tabHolder = document.getElementsByClassName('tabContent');
-  let contentHolder = document.createElement('div');
-  let title = document.createElement('div');
-  let smallContainer = document.createElement('div');
+const contactRenderer = () => {
+  const tabHolder = document.getElementsByClassName('tabContent');
+  const contentHolder = document.createElement('div');
+  const title = document.createElement('div');
+  const smallContainer = document.createElement('div');
 
   contentHolder.setAttribute('class', 'Page');
   contentHolder.className += ' contact active';
@@ -15,6 +15,6 @@ function contactRenderer() {
   contentHolder.appendChild(title);
   contentHolder.appendChild(smallContainer);
   tabHolder[0].appendChild(contentHolder);
-}
+};
 
-export { contactRenderer };
+export { contactRenderer as default };

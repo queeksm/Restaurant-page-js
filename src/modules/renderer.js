@@ -1,19 +1,16 @@
-import { styler } from '../index';
-
-
-function masterController() {
-  let mContainer = document.getElementById('content');
-  let tabManager = document.createElement('div');
+const masterController = (styler) => {
+  const mContainer = document.getElementById('content');
+  const tabManager = document.createElement('div');
   tabManager.setAttribute('class', 'tabManager');
 
-  let tabs = document.createElement('div');
+  const tabs = document.createElement('div');
   tabs.setAttribute('class', 'tabs');
 
-  let tabOne = document.createElement('button');
-  let tabTwo = document.createElement('button');
-  let tabThree = document.createElement('button');
+  const tabOne = document.createElement('button');
+  const tabTwo = document.createElement('button');
+  const tabThree = document.createElement('button');
 
-  let tabContent = document.createElement('div');
+  const tabContent = document.createElement('div');
   tabContent.style.display = 'none';
 
   tabOne.setAttribute('class', 'tab');
@@ -38,6 +35,6 @@ function masterController() {
   tabManager.appendChild(tabContent);
 
   mContainer.appendChild(tabManager);
-}
+};
 
-export { masterController };
+export { masterController as default };

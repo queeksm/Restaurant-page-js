@@ -1,8 +1,8 @@
-function mainTabRenderer() {
-  let tabHolder = document.getElementsByClassName('tabContent');
-  let contentHolder = document.createElement('div');
-  let title = document.createElement('div');
-  let smallContent = document.createElement('div');
+const mainTabRenderer = () => {
+  const tabHolder = document.getElementsByClassName('tabContent');
+  const contentHolder = document.createElement('div');
+  const title = document.createElement('div');
+  const smallContent = document.createElement('div');
 
   contentHolder.setAttribute('class', 'Page');
   contentHolder.className += ' main active';
@@ -21,6 +21,6 @@ function mainTabRenderer() {
   contentHolder.appendChild(title);
   contentHolder.appendChild(smallContent);
   tabHolder[0].appendChild(contentHolder);
-}
+};
 
-export { mainTabRenderer };
+export { mainTabRenderer as default };

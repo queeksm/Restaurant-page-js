@@ -1,26 +1,25 @@
 import './style.css';
-import { masterController } from './modules/renderer';
-import { mainTabRenderer } from './modules/mainTab';
-import { menuRenderer } from './modules/menuTab';
-import { contactRenderer } from './modules/contact';
+import masterController from './modules/renderer';
+import mainTabRenderer from './modules/mainTab';
+import menuRenderer from './modules/menuTab';
+import contactRenderer from './modules/contact';
 
-function tabCleaner(tab) {
-  let currentPages = document.getElementsByClassName('Page');
+const tabCleaner = (tab) => {
+  const currentPages = document.getElementsByClassName('Page');
 
   for (let index = 0; index < currentPages.length; index += 1) {
     if (currentPages[index].className !== tab[0].className) {
       currentPages[index].className = currentPages[index].className.replace('active', 'none');
-    }
-    else {
+    } else {
       currentPages[index].className = currentPages[index].className.replace('none', 'active');
     }
   }
-}
+};
 
-function tabFiller(tabId) {
-  let flag = document.getElementsByClassName('main');
-  let flag2 = document.getElementsByClassName('menu');
-  let flag3 = document.getElementsByClassName('contact');
+const tabFiller = (tabId) => {
+  const flag = document.getElementsByClassName('main');
+  const flag2 = document.getElementsByClassName('menu');
+  const flag3 = document.getElementsByClassName('contact');
   switch (tabId) {
     case 'tabOne':
       if (flag[0] == null) {
@@ -43,16 +42,16 @@ function tabFiller(tabId) {
     default:
       break;
   }
-}
+};
 
-function toggler(mContainer, tab) {
+const toggler = (mContainer, tab) => {
   mContainer.style.display = 'initial';
   tabFiller(tab);
-}
+};
 
-function styler(evt) {
-  let mContainer = document.getElementsByClassName('tabContent');
-  let tabs = document.getElementsByClassName('tab');
+const styler = (evt) => {
+  const mContainer = document.getElementsByClassName('tabContent');
+  const tabs = document.getElementsByClassName('tab');
 
   for (let i = 0; i < tabs.length; i += 1) {
     tabs[i].className = tabs[i].className.replace('active', '');
@@ -60,8 +59,6 @@ function styler(evt) {
 
   evt.currentTarget.className += ' active';
   toggler(mContainer[0], evt.currentTarget.id);
-}
+};
 
-masterController();
-
-export { styler };
+masterController(styler);
