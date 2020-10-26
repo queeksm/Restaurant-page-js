@@ -1,0 +1,33 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/queeksm/Restaurant-page-js.git"
+  },
+  "author": "Andres Felipe Perez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/queeksm/Restaurant-page-js/issues"
+  },
+  "homepage": "https://github.com/queeksm/Restaurant-page-js#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^4.2.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "file-loader": "^6.0.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
